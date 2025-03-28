@@ -41,7 +41,15 @@ spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
 ```
 ### 🔹 3. Rodar o Back-End (Spring Boot)
+```bash
+cd spring
+mvn spring-boot:run
+```
 ### 🔹 4. Rodar o Front-End (Angular)
+```bash
+npm install
+ng serve --open
+```
 
 ---
 
