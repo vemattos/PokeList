@@ -1,0 +1,9 @@
+.vscode/
+
+angular/node_modules/
+
+angular/dist/
+spring/target/
+
+.DS_Store
+Thumbs.db
