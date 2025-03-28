@@ -42,11 +42,12 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 ### 🔹 3. Rodar o Back-End (Spring Boot)
 ```bash
-cd spring
+cd poke
 mvn spring-boot:run
 ```
 ### 🔹 4. Rodar o Front-End (Angular)
 ```bash
+cd poke
 npm install
 ng serve --open
 ```
