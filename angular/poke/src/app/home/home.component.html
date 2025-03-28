@@ -1,0 +1,67 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="0.5"></ion-col>
+
+      <ion-col size="11">
+            <ion-title style="text-align: center; margin-top: 2%;">PokeList</ion-title>
+      </ion-col>
+
+      <ion-col size="0.5"></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="0.5"></ion-col>
+
+      <ion-col size="11">
+        <div class="scroll-container">
+          <div class="scroll-content">
+            <ion-list>
+              <ion-item *ngFor="let pokemon of pokemonsList">
+                <ion-label>
+                  <h2>{{ pokemon.name }}</h2>
+                  <p>{{ pokemon.type }}</p>
+                </ion-label>
+        
+                <ion-buttons slot="end">
+                  <ion-button (click)="openForm(pokemon)">
+                    <ion-icon slot="icon-only" name="create"></ion-icon>
+                  </ion-button>
+                  <ion-button (click)="confirmarExclusao(pokemon.id)">
+                    <ion-icon slot="icon-only" name="trash"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </ion-item>
+            </ion-list>
+          </div>
+        </div>
+
+        <div *ngIf="showModal" class="modal-overlay" (click)="closeModal()">
+          <div class="modal-card" (click)="$event.stopPropagation()">
+            <ion-icon name="close" class="close-btn" (click)="closeModal()"></ion-icon>
+            <h2>{{ pokemon ? "Editar Pokemon" : "Adicionar Pokemon" }}</h2>
+            <form (submit)="savePokemon()">
+              <label>Name</label>
+              <input [(ngModel)]="pokemonForm.name" name="name" required />
+        
+              <label>Type</label>
+              <input [(ngModel)]="pokemonForm.type" name="type" required />
+        
+              <button type="submit">{{ pokemon ? "Update" : "Create" }}</button>
+            </form>
+          </div>
+        </div>
+        
+      </ion-col>
+
+      <ion-col size="0.5"></ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button color="primary" (click)="openForm()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

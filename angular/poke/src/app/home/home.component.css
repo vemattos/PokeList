@@ -1,0 +1,168 @@
+ion-header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ion-title {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffbb00;
+  text-shadow: 2px 2px 0px #c0392b, 3px 3px 0px #8e44ad, 4px 4px 0px #3498db;
+}
+
+.scroll-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+}
+
+.scroll-content {
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+
+
+ion-list {
+  display: block;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+ion-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 10px auto;
+  padding: 15px;
+  border: solid black;
+}
+
+ion-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+ion-label h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+ion-label p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.modal-card h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.modal-card label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-card input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.modal-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-card button:hover {
+  background-color: #45a049;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #d32f2f;
+  transform: scale(1.1);
+}
+
+ion-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-button ion-icon {
+  font-size: 1.2rem;
+}
+
+ion-button:hover {
+  transform: scale(1.1);
+}
