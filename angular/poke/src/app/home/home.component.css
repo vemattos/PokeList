@@ -8,12 +8,16 @@ ion-header {
 
 ion-title {
   font-family: 'Press Start 2P', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #ffbb00;
-  text-shadow: 2px 2px 0px #c0392b, 3px 3px 0px #8e44ad, 4px 4px 0px #3498db;
+  color: #fff;
+  text-shadow: 3px 3px 0px #ff0000, -3px -3px 0px #3b4cca;
+}
+
+ion-content {
+  --background: linear-gradient(135deg, #ff0000 0%, #ffcc00 100%);
 }
 
 .scroll-container {
@@ -22,45 +26,66 @@ ion-title {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.25);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   height: 500px;
   overflow: hidden;
-  border: 2px solid #ccc;
 }
 
 .scroll-content {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #ffcc00 #00000033;
 }
 
+.scroll-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff0000, #ffcc00);
+  border-radius: 10px;
+}
+
+.scroll-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff6600, #ffee00);
+}
 
 ion-list {
-  display: block;
-  padding: 0 20px;
+  --background: transparent;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 10px 20px;
   margin-top: 20px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 ion-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
   width: 100%;
   max-width: 320px;
   margin: 10px auto;
   padding: 15px;
-  border: solid black;
+  border-radius: 15px;
+  border: 2px solid #ffcc00;
+  background: linear-gradient(135deg, #fff 0%, #f1f1f1 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 ion-item:hover {
   transform: scale(1.05);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
 ion-label h2 {
@@ -72,6 +97,24 @@ ion-label h2 {
 ion-label p {
   font-size: 1rem;
   color: #777;
+}
+
+ion-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  padding: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+ion-button ion-icon {
+  font-size: 1.2rem;
+}
+
+ion-button:hover {
+  transform: scale(1.1);
 }
 
 .modal-overlay {
@@ -143,26 +186,10 @@ ion-label p {
   font-size: 1.5rem;
   color: #333;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .close-btn:hover {
   color: #d32f2f;
-  transform: scale(1.1);
-}
-
-ion-button {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  margin: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-ion-button ion-icon {
-  font-size: 1.2rem;
-}
-
-ion-button:hover {
   transform: scale(1.1);
 }
