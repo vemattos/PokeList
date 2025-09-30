@@ -1,5 +1,5 @@
 ## **🏆 PokeList**  
-Bem-vindo ao PokeList! Este projeto foi desenvolvido com o objetivo de ensinar os conceitos básicos de interação entre **Front-End (Angular)** e **Back-End (Spring Boot)**, mostrando como funciona um **CRUD** (Create, Read, Update, Delete).
+Bem-vindo ao PokeList! Este projeto foi desenvolvido com o objetivo de ensinar os conceitos básicos de interação entre **Front-End (Angular)**, **Back-End (Spring Boot)** e **Banco de Dados (MariaDB)**, mostrando como funciona um **CRUD** (Create, Read, Update, Delete).
 
 ---
 
